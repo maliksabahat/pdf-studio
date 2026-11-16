@@ -1,0 +1,65 @@
+PDF Studio
+Design for Anas Computer
+Contact: 0333 5697510
+Developed by TB Ladla Production
+Contact: 0302 5300651
+============================================================
+
+HOW TO RUN (Windows)
+
+1. Extract the whole ZIP file first.
+   Do not run the EXE directly from inside the ZIP.
+
+2. Open the "PDF Studio" folder and double-click "PDF Studio.exe".
+
+3. Wait a few seconds. Your browser opens the app automatically.
+   If it does not open, look at the black window for the address
+   (for example http://127.0.0.1:54321) and type it in your browser.
+
+4. Keep the black window open while you work.
+   To stop the app: click "Stop server" at the bottom of the page,
+   or simply close the black window.
+
+Python is NOT required.
+Microsoft Word / Excel / PowerPoint are NOT required.
+Everything runs on this computer. No internet connection is used.
+
+
+WHAT IT DOES
+
+Page Studio
+  Drop PDFs and images. Every page becomes a card. Drag to reorder,
+  rotate, duplicate or delete pages, then create a new PDF.
+  Click any page thumbnail to view it full size (arrow keys change
+  pages, + / - zooms, Esc closes).
+
+PDF -> Images
+  Turn every page of a PDF into JPG, PNG or WebP images. All pages are
+  shown; click a page for a full-size preview or use its download icon
+  to save just that page. "Convert to images" downloads one ZIP, or a
+  single image directly when only one page is selected.
+
+Mixed content -> PDF
+  Combine Word, Excel, PowerPoint, PDF, images, text, Markdown, CSV,
+  HTML, RTF and code files into one PDF, in the order you choose.
+  Every file in the list shows a first-page preview. Click the preview to
+  view it full size, with arrows to move through the list.
+  A Beta / test mode button under the list shows a development notice.
+
+
+GOOD TO KNOW
+
+- Windows may show a blue "Windows protected your PC" message the
+  first time, because this app is new and not code-signed.
+  Click "More info" -> "Run anyway".
+
+- Uploads are limited to 500 MB and PDFs to 1500 pages.
+
+- Temporary files are stored in the "work" folder next to the EXE
+  and are cleared the next time the app starts.
+
+- Old .doc / .xls / .ppt files are not supported. Open them in
+  Office and save them as .docx / .xlsx / .pptx first.
+
+- The app only listens on this computer (127.0.0.1), so other
+  computers cannot access it.

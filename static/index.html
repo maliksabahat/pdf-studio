@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <title>PDF Studio — Design for Anas Computer</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <svg class="svg-defs" aria-hidden="true">
+    <symbol id="i-logo" viewBox="0 0 24 24">
+      <path d="M6 2.8h7.2L19 8.6v11.2a1.4 1.4 0 0 1-1.4 1.4H6a1.4 1.4 0 0 1-1.4-1.4V4.2A1.4 1.4 0 0 1 6 2.8Z"/>
+      <path d="M13 2.8v6h6"/>
+      <path d="m9.4 16.4 1.7-4.4 1.7 4.4M10 15h2.2M14.6 12v4.4"/>
+    </symbol>
+    <symbol id="i-upload" viewBox="0 0 24 24">
+      <path d="M12 16V4M7.5 8.5 12 4l4.5 4.5"/>
+      <path d="M4 15v3.5A1.5 1.5 0 0 0 5.5 20h13a1.5 1.5 0 0 0 1.5-1.5V15"/>
+    </symbol>
+    <symbol id="i-pages" viewBox="0 0 24 24">
+      <rect x="4" y="3" width="12" height="16" rx="1.5"/>
+      <path d="M8 7h4M8 10h4M8 13h4"/>
+      <path d="M18 7v12.5A1.5 1.5 0 0 1 16.5 21H8"/>
+    </symbol>
+    <symbol id="i-image" viewBox="0 0 24 24">
+      <rect x="3" y="4" width="18" height="16" rx="2"/>
+      <circle cx="8.5" cy="9" r="1.6"/>
+      <path d="m4 17 5-5 4 4 2.5-2.5L20 18"/>
+    </symbol>
+    <symbol id="i-mixed" viewBox="0 0 24 24">
+      <rect x="3" y="3" width="8" height="8" rx="1.6"/>
+      <rect x="13" y="3" width="8" height="8" rx="1.6"/>
+      <rect x="3" y="13" width="8" height="8" rx="1.6"/>
+      <path d="M17 13v8M13 17h8"/>
+    </symbol>
+    <symbol id="i-rotate" viewBox="0 0 24 24">
+      <path d="M20 11a8 8 0 1 1-2.3-5.6"/>
+      <path d="M20 4v7h-7"/>
+    </symbol>
+    <symbol id="i-copy" viewBox="0 0 24 24">
+      <rect x="9" y="9" width="11" height="11" rx="1.6"/>
+      <path d="M5 15H4.5A1.5 1.5 0 0 1 3 13.5v-9A1.5 1.5 0 0 1 4.5 3h9A1.5 1.5 0 0 1 15 4.5V5"/>
+    </symbol>
+    <symbol id="i-trash" viewBox="0 0 24 24">
+      <path d="M4 7h16M9 7V4.5h6V7M6.5 7l.8 12.2A1.5 1.5 0 0 0 8.8 20h6.4a1.5 1.5 0 0 0 1.5-1.8L17.5 7"/>
+      <path d="M10 11v5M14 11v5"/>
+    </symbol>
+    <symbol id="i-left" viewBox="0 0 24 24"><path d="m14.5 6-6 6 6 6"/></symbol>
+    <symbol id="i-right" viewBox="0 0 24 24"><path d="m9.5 6 6 6-6 6"/></symbol>
+    <symbol id="i-up" viewBox="0 0 24 24"><path d="m6 14.5 6-6 6 6"/></symbol>
+    <symbol id="i-down" viewBox="0 0 24 24"><path d="m6 9.5 6 6 6-6"/></symbol>
+    <symbol id="i-x" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></symbol>
+    <symbol id="i-download" viewBox="0 0 24 24">
+      <path d="M12 4v11M7.5 10.5 12 15l4.5-4.5"/>
+      <path d="M4 17v2.5A1.5 1.5 0 0 0 5.5 21h13a1.5 1.5 0 0 0 1.5-1.5V17"/>
+    </symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7"/></symbol>
+    <symbol id="i-file" viewBox="0 0 24 24">
+      <path d="M6 2.8h7.2L19 8.6v11.2a1.4 1.4 0 0 1-1.4 1.4H6a1.4 1.4 0 0 1-1.4-1.4V4.2A1.4 1.4 0 0 1 6 2.8Z"/>
+      <path d="M13 2.8v6h6M8 13h8M8 16h5"/>
+    </symbol>
+    <symbol id="i-pdf" viewBox="0 0 24 24">
+      <path d="M6 2.8h7.2L19 8.6v11.2a1.4 1.4 0 0 1-1.4 1.4H6a1.4 1.4 0 0 1-1.4-1.4V4.2A1.4 1.4 0 0 1 6 2.8Z"/>
+      <path d="M13 2.8v6h6"/>
+      <path d="M8 17v-4h1.4a1.3 1.3 0 0 1 0 2.6H8M12 17v-4h1.2c1 0 1.6.8 1.6 2s-.6 2-1.6 2H12M17 17v-4h2.2M17 15h1.7"/>
+    </symbol>
+    <symbol id="i-expand" viewBox="0 0 24 24">
+      <path d="M9 4H4v5M15 4h5v5M9 20H4v-5M15 20h5v-5"/>
+    </symbol>
+    <symbol id="i-grip" viewBox="0 0 24 24">
+      <circle cx="9" cy="6" r="1.1"/><circle cx="15" cy="6" r="1.1"/>
+      <circle cx="9" cy="12" r="1.1"/><circle cx="15" cy="12" r="1.1"/>
+      <circle cx="9" cy="18" r="1.1"/><circle cx="15" cy="18" r="1.1"/>
+    </symbol>
+  </svg>
+
+  <header class="topbar">
+    <div class="shell topbar-inner">
+      <a class="brand" href="#top">
+        <span class="logo-mark"><svg><use href="#i-logo"/></svg></span>
+        <span class="brand-text"><strong>PDF Studio</strong><small>Design for Anas Computer · 0333 5697510</small></span>
+      </a>
+      <nav class="nav" aria-label="Sections">
+        <a href="#pages" class="active">Page Studio</a>
+        <a href="#images">PDF → Images</a>
+        <a href="#mixed">Mixed → PDF</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="shell" id="top">
+    <section class="hero">
+      <div class="hero-copy">
+        <div class="hero-tags">
+          <span class="eyebrow">Local workspace · nothing leaves your computer</span>
+          <span class="eyebrow accent">Design for Anas Computer · 0333 5697510</span>
+        </div>
+        <h1>Build the PDF you actually want.</h1>
+        <p>Pull pages out of PDFs, add photos, reorder everything, export pages as images, and merge Word, Excel, PowerPoint and text into one document.</p>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="art-sheet back"></div>
+        <div class="art-sheet mid"></div>
+        <div class="art-sheet front">
+          <span class="art-line w70"></span>
+          <span class="art-line w90"></span>
+          <span class="art-line w55"></span>
+          <span class="art-block"></span>
+          <span class="art-line w80"></span>
+          <span class="art-line w45"></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= PAGE STUDIO ================= -->
+    <section class="panel" id="pages" data-section="pages">
+      <div class="panel-head">
+        <span class="step">01</span>
+        <div class="panel-title">
+          <h2>Page Studio</h2>
+          <p>Drop PDFs and images. Every page becomes a card — drag to reorder, rotate, duplicate or remove, then create a new PDF.</p>
+        </div>
+        <span class="panel-stat" id="pageStat">0 pages</span>
+      </div>
+
+      <div class="dropzone" id="pageDrop" role="button" tabindex="0" aria-label="Drop PDFs or images here, or press Enter to browse">
+        <input type="file" id="pageInput" multiple accept=".pdf,application/pdf,image/*" hidden>
+        <span class="drop-icon"><svg><use href="#i-upload"/></svg></span>
+        <h3>Drop PDFs or images here</h3>
+        <p>PDF pages are split into cards. Each image becomes its own page.</p>
+        <button class="btn ghost" type="button" data-browse="pageInput">Browse files</button>
+        <span class="drop-note">PDF · PNG · JPG · WEBP · HEIC · TIFF</span>
+      </div>
+
+      <div class="workspace" id="pageWorkspace" hidden>
+        <div class="toolbar">
+          <label class="field">
+            <span>Image page size</span>
+            <select id="pageSize">
+              <option value="a4">A4</option>
+              <option value="letter">Letter</option>
+              <option value="auto">Auto (image size)</option>
+            </select>
+          </label>
+          <label class="field">
+            <span>Image fit</span>
+            <select id="pageFit">
+              <option value="contain">Contain</option>
+              <option value="cover">Cover (crop)</option>
+            </select>
+          </label>
+          <label class="field narrow">
+            <span>Margin</span>
+            <select id="pageMargin">
+              <option value="0">None</option>
+              <option value="12">Small</option>
+              <option value="24" selected>Medium</option>
+              <option value="36">Large</option>
+            </select>
+          </label>
+          <label class="check">
+            <input type="checkbox" id="uniform">
+            <span>Uniform PDF page size</span>
+          </label>
+          <label class="field grow">
+            <span>File name</span>
+            <input id="pageName" value="organized" spellcheck="false">
+          </label>
+          <div class="toolbar-actions">
+            <button class="btn ghost" id="pageAdd" type="button">+ Add files</button>
+            <button class="btn ghost danger-text" id="pageClear" type="button">Clear</button>
+            <button class="btn primary" id="pageBuild" type="button">Create PDF</button>
+          </div>
+        </div>
+        <p class="hint">Drag a card onto another to reorder. Drop new files between cards to insert them at that spot. Click a thumbnail to view it full size. Rotation applies when the PDF is built.</p>
+        <div class="page-grid" id="pageGrid" role="list" aria-label="Pages in the workspace"></div>
+        <div class="result" id="pageResult" hidden></div>
+      </div>
+      <div class="busy" hidden><span class="spinner"></span><p>Working…</p></div>
+    </section>
+
+    <!-- ================= PDF -> IMAGES ================= -->
+    <section class="panel" id="images" data-section="images">
+      <div class="panel-head">
+        <span class="step">02</span>
+        <div class="panel-title">
+          <h2>PDF → Images</h2>
+          <p>Turn every page of a PDF into a picture. Pick a format and resolution, then download all pages in one ZIP or save any page individually. A single page is saved directly as an image.</p>
+        </div>
+      </div>
+
+      <div class="split">
+        <div class="split-main">
+          <div class="dropzone compact" id="imageDrop" role="button" tabindex="0" aria-label="Drop one PDF here, or press Enter to browse">
+            <input type="file" id="imageInput" accept=".pdf,application/pdf" hidden>
+            <span class="drop-icon"><svg><use href="#i-pdf"/></svg></span>
+            <h3>Drop one PDF here</h3>
+            <p>All pages will be exported as individual images.</p>
+            <button class="btn ghost" type="button" data-browse="imageInput">Choose PDF</button>
+          </div>
+
+          <div class="file-summary" id="imageFile" hidden>
+            <span class="file-type pdf">PDF</span>
+            <div class="file-info">
+              <strong id="imageName">document.pdf</strong>
+              <span id="imageMeta"></span>
+            </div>
+            <button class="icon-btn" id="imageRemove" type="button" title="Remove file">
+              <svg><use href="#i-x"/></svg>
+            </button>
+          </div>
+          <div class="preview-strip" id="imagePreview"></div>
+          <p class="hint">All pages are shown. Use the zoom icon to preview a page full size, or the download icon to save just that page.</p>
+        </div>
+
+        <div class="options-card">
+          <h3>Export settings</h3>
+          <label class="field">
+            <span>Image format</span>
+            <select id="imageFormat">
+              <option value="png">PNG — lossless</option>
+              <option value="jpg">JPG — smaller</option>
+              <option value="webp">WEBP — modern</option>
+            </select>
+          </label>
+          <label class="field">
+            <span>Resolution</span>
+            <select id="imageDpi">
+              <option value="72">72 DPI — screen</option>
+              <option value="150" selected>150 DPI — standard</option>
+              <option value="300">300 DPI — print</option>
+              <option value="600">600 DPI — high detail</option>
+            </select>
+          </label>
+          <label class="field" id="qualityField" hidden>
+            <span>Quality <b id="qualityValue">90</b></span>
+            <input type="range" id="imageQuality" min="40" max="100" value="90">
+          </label>
+          <label class="field">
+            <span>Pages</span>
+            <input id="imageRange" placeholder="All pages — e.g. 1-3, 5" spellcheck="false">
+          </label>
+          <button class="btn primary wide" id="imageConvert" type="button" disabled>Convert to images</button>
+          <div class="result" id="imageResult" hidden></div>
+        </div>
+      </div>
+      <div class="busy" hidden><span class="spinner"></span><p>Rendering pages…</p></div>
+    </section>
+
+    <!-- ================= MIXED -> PDF ================= -->
+    <section class="panel" id="mixed" data-section="mixed">
+      <div class="panel-head">
+        <span class="step">03</span>
+        <div class="panel-title">
+          <h2>Mixed content → PDF</h2>
+          <p>Combine Word, Excel, PowerPoint, PDF, images, text, Markdown, CSV, HTML and code files into a single PDF, in the order you choose.</p>
+        </div>
+      </div>
+
+      <div class="dropzone" id="mixedDrop" role="button" tabindex="0" aria-label="Drop documents or images here, or press Enter to browse">
+        <input type="file" id="mixedInput" multiple
+               accept=".pdf,.docx,.docm,.xlsx,.xlsm,.pptx,.pptm,.txt,.md,.markdown,.csv,.tsv,.json,.xml,.yaml,.yml,.html,.htm,.rtf,.log,.ini,.cfg,.py,.js,.ts,.css,.java,.c,.cpp,.cs,.php,.rb,.go,.rs,.sql,.sh,.bat,.ps1,.vue,image/*"
+               hidden>
+        <span class="drop-icon"><svg><use href="#i-mixed"/></svg></span>
+        <h3>Drop documents, images or anything else</h3>
+        <p>DOCX · XLSX · PPTX · PDF · images · TXT · MD · CSV · HTML · RTF · code</p>
+        <button class="btn ghost" type="button" data-browse="mixedInput">Browse files</button>
+        <span class="drop-note">Legacy .doc / .xls / .ppt: save as .docx / .xlsx / .pptx first</span>
+      </div>
+
+      <div class="workspace" id="mixedWorkspace" hidden>
+        <div class="toolbar">
+          <label class="field">
+            <span>Page size</span>
+            <select id="mixedSize">
+              <option value="a4">A4</option>
+              <option value="letter">Letter</option>
+              <option value="legal">Legal</option>
+            </select>
+          </label>
+          <label class="field">
+            <span>Orientation</span>
+            <select id="mixedOrientation">
+              <option value="auto">Auto</option>
+              <option value="portrait">Portrait</option>
+              <option value="landscape">Landscape</option>
+            </select>
+          </label>
+          <label class="field narrow">
+            <span>Margin</span>
+            <select id="mixedMargin">
+              <option value="24">Small</option>
+              <option value="48" selected>Normal</option>
+              <option value="72">Large</option>
+            </select>
+          </label>
+          <label class="field grow">
+            <span>File name</span>
+            <input id="mixedName" value="mixed-document" spellcheck="false">
+          </label>
+          <div class="toolbar-actions">
+            <button class="btn ghost" id="mixedAdd" type="button">+ Add files</button>
+            <button class="btn ghost danger-text" id="mixedClear" type="button">Clear</button>
+            <button class="btn primary" id="mixedBuild" type="button">Build PDF</button>
+          </div>
+        </div>
+        <p class="hint">Drag rows to change the order, or drop new files between rows to insert them there. Each row shows a first-page preview — click it to view full size.</p>
+        <div class="mixed-list" id="mixedList" role="list" aria-label="Files in the mixed document"></div>
+        <div class="result" id="mixedResult" hidden></div>
+        <div class="beta-block">
+          <button class="btn ghost beta-btn" id="mixedBeta" type="button" aria-expanded="false" aria-controls="mixedBetaNote">
+            <span class="beta-dot"></span> Beta / test mode — still in development
+          </button>
+          <div class="beta-note" id="mixedBetaNote" hidden>
+            <strong>Beta mode</strong>
+            <p>Mixed content → PDF is still in development. Test it with your files and report anything that looks wrong.</p>
+          </div>
+        </div>
+      </div>
+      <div class="busy" hidden><span class="spinner"></span><p>Converting documents…</p></div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-about">
+        <strong>PDF Studio</strong>
+        <span>Runs locally on your machine. Files are stored in the app's temporary <code>work</code> folder and cleared on the next launch.</span>
+      </div>
+      <div class="footer-credits">
+        <div class="credit">
+          <span class="credit-label">Design for</span>
+          <strong>Anas Computer</strong>
+          <a href="tel:+923335697510">Contact 0333 5697510</a>
+        </div>
+        <div class="credit">
+          <span class="credit-label">Developed by</span>
+          <strong>TB Ladla Production</strong>
+          <a href="tel:+923025300651">Contact 0302 5300651</a>
+        </div>
+      </div>
+      <button class="link-btn" id="shutdownBtn" type="button">Stop server</button>
+    </footer>
+  </main>
+
+  <div class="lightbox" id="lightbox" hidden>
+    <div class="lightbox-backdrop" id="lightboxBackdrop"></div>
+    <div class="lightbox-card" role="dialog" aria-modal="true" aria-labelledby="lightboxTitle">
+      <div class="lightbox-bar">
+        <div class="lightbox-caption">
+          <strong id="lightboxTitle">Preview</strong>
+          <span id="lightboxMeta"></span>
+        </div>
+        <div class="lightbox-actions">
+          <button class="icon-btn" id="lightboxPrev" type="button" title="Previous page (←)" aria-label="Previous page"><svg><use href="#i-left"/></svg></button>
+          <button class="icon-btn" id="lightboxNext" type="button" title="Next page (→)" aria-label="Next page"><svg><use href="#i-right"/></svg></button>
+          <span class="lightbox-zoom" id="lightboxZoomLabel">Fit</span>
+          <button class="lightbox-btn" id="lightboxZoomOut" type="button" title="Zoom out (−)" aria-label="Zoom out">−</button>
+          <button class="lightbox-btn" id="lightboxZoomIn" type="button" title="Zoom in (+)" aria-label="Zoom in">+</button>
+          <button class="lightbox-btn" id="lightboxReset" type="button" title="Reset zoom (0)">Reset</button>
+          <button class="icon-btn danger" id="lightboxClose" type="button" title="Close (Esc)" aria-label="Close preview"><svg><use href="#i-x"/></svg></button>
+        </div>
+      </div>
+      <div class="lightbox-stage" id="lightboxStage">
+        <img id="lightboxImage" alt="" draggable="false">
+      </div>
+      <div class="lightbox-foot">
+        <span id="lightboxCounter"></span>
+        <span>Use the + / − buttons to zoom · ← / → change page · Esc to close</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="toasts" id="toasts" aria-live="polite"></div>
+  <script src="/static/app.js"></script>
+</body>
+</html>

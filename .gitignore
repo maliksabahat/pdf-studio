@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.spec
+
+# Build output
+build/
+dist/
+*.zip
+*.exe
+
+# Runtime data
+work/
+*.log
+
+# Local environment
+.env
+.venv/
+venv/
+
+# Editors / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
